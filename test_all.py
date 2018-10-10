@@ -1,5 +1,7 @@
 from tkinter import Tk
 import unittest
+
+from frontend.frames.actualdata import StudentData
 from frontend.mainwindow import MainWindow
 
 
@@ -18,3 +20,8 @@ class testTest(unittest.TestCase):
             self.instance.staff_meeting_frame['text'],
             "Zespół orzekający"
         )
+
+    def test_pesel_validation(self):
+        student1 = StudentData()
+        student1.pesel_string = "10211529111"
+
